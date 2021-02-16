@@ -77,6 +77,9 @@ export default function Home() {
         <title>
           Vinicius Amélio - Desenvolvedor de Software
         </title>
+        <meta charset="UTF-8"></meta>
+        <meta name="description" content="Desenvolvimento de Sites, WebApps e Mobile Apps"/>
+        <meta name="author" content="Vinicius Amélio"></meta>
         <link rel="shortcut icon" href="/icon.ico" />
       </Head>
       <Navbar />
