@@ -73,6 +73,12 @@ export default function Home() {
 
   return (
     <main className="is-12">
+      <Head>
+        <title>
+          Vinicius Amélio - Desenvolvedor de Software
+        </title>
+        <link rel="shortcut icon" href="/icon.ico" />
+      </Head>
       <Navbar />
       <div className="column is-12 is-flex is-align-items-center is-justify-content-center" style={{ marginTop: "105px" }}>
         <div className="column">
