@@ -62,10 +62,10 @@ export default function Home() {
           }
         }
       ]} hasArrows={true} duration={0.75} ref={gliderRef}>
-      <Slide image={<Image src="/pixel.png"  width="140px" height="72px" />} project={"https://pixelcoders.com.br"} github="https://github.com/viniciusamelio/pixelcoders-react" name="PixelCoders"  />
-      <Slide image={<Image src="/biometricas.svg"  width="90px" height="90px" />} project={"https://drive.google.com/file/d/155y9_F43xDOuX3xoYWs_sVlKQh48--5g/view?usp=sharing"} github="https://github.com/viniciusamelio/biometricas" name="Biométricas"  />
-      <Slide image={<Image src="/sigla.png"  width="190px" height="70px" />} project={"https://sigla-hml.vercel.app"} github="https://github.com/viniciusamelio/sigla" name="Sigla"  />
-      <Slide image={<Image src="/pixeltasks.png"  width="70px" height="70px" />} project={"https://drive.google.com/file/d/1qxJwlaVUzONS0lnoMIc-lapztK0rkwTY/view?usp=sharing"} github="https://github.com/viniciusamelio/pixeltasks" name="PixelTasks"  />
+      <Slide tags={["React", "FlexBox"]} image={<Image src="/pixel.png"  width="140px" height="72px" />} project={"https://pixelcoders.com.br"} github="https://github.com/viniciusamelio/pixelcoders-react" name="PixelCoders"  />
+      <Slide tags={["Flutter", "NodeJS", "AdonisJS"]} image={<Image src="/biometricas.svg"  width="90px" height="90px" />} project={"https://drive.google.com/file/d/155y9_F43xDOuX3xoYWs_sVlKQh48--5g/view?usp=sharing"} github="https://github.com/viniciusamelio/biometricas" name="Biométricas"  />
+      <Slide tags={["Next", "Bulma"]} image={<Image src="/sigla.png"  width="190px" height="70px" />} project={"https://sigla-hml.vercel.app"} github="https://github.com/viniciusamelio/sigla" name="Sigla"  />
+      <Slide tags={["Flutter"]} image={<Image src="/pixeltasks.png"  width="70px" height="70px" />} project={"https://drive.google.com/file/d/1qxJwlaVUzONS0lnoMIc-lapztK0rkwTY/view?usp=sharing"} github="https://github.com/viniciusamelio/pixeltasks" name="PixelTasks"  />
 
     </Glider>
     }
@@ -95,7 +95,7 @@ export default function Home() {
                   React, Next, Flutter, NodeJS, PHP e Adobe XD
                 </h3>
                 <div className="column is-12 has-text-centered is-hidden-desktop">
-                  <Button text="Me contrate" />
+                  <Button onClick={()=>window.open('https://api.whatsapp.com/send?phone=5511951213836&text=Ol%C3%A1%2CVinicius%2C%20estou%20entrando%20em%20contato%20atrav%C3%A9s%20do%20seu%20portf%C3%B3lio!',"__blank")} text="Me contrate" />
                 </div>
               </div>
             </div>
