@@ -2,10 +2,11 @@ import Head from 'next/head'
 import Navbar from '../components/navbar';
 import Image from 'next/image';
 import Button from '../components/button';
-import React, {useState,useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import 'glider-js/glider.min.css';
 import Glider from 'react-glider';
 import Slide from '../components/slide';
+import { motion } from "framer-motion";
 
 export default function Home() {
 
@@ -19,7 +20,7 @@ export default function Home() {
 
   useEffect(() => {
     if (showGlider) {
-      sliderAuto(gliderRef.current,2000);
+      sliderAuto(gliderRef.current, 2000);
     }
   });
 
@@ -49,8 +50,8 @@ export default function Home() {
   }
 
 
-  const carousel = ()=>{
-    if(showGlider){
+  const carousel = () => {
+    if (showGlider) {
       return <Glider draggable={true} scrollLock={true} responsive={[
         {
           breakpoint: 1024,
@@ -62,12 +63,12 @@ export default function Home() {
           }
         }
       ]} hasArrows={true} duration={0.75} ref={gliderRef}>
-      <Slide tags={["React", "FlexBox"]} image={<Image src="/pixel.png"  width="140px" height="72px" />} project={"https://pixelcoders.com.br"} github="https://github.com/viniciusamelio/pixelcoders-react" name="PixelCoders"  />
-      <Slide tags={["Flutter", "NodeJS", "AdonisJS"]} image={<Image src="/biometricas.svg"  width="90px" height="90px" />} project={"https://drive.google.com/file/d/155y9_F43xDOuX3xoYWs_sVlKQh48--5g/view?usp=sharing"} github="https://github.com/viniciusamelio/biometricas" name="Biométricas"  />
-      <Slide tags={["Next", "Bulma"]} image={<Image src="/sigla.png"  width="190px" height="70px" />} project={"https://sigla-hml.vercel.app"} github="https://github.com/viniciusamelio/sigla" name="Sigla"  />
-      <Slide tags={["Flutter"]} image={<Image src="/pixeltasks.png"  width="70px" height="70px" />} project={"https://drive.google.com/file/d/1qxJwlaVUzONS0lnoMIc-lapztK0rkwTY/view?usp=sharing"} github="https://github.com/viniciusamelio/pixeltasks" name="PixelTasks"  />
+        <Slide key="0" tags={["React", "FlexBox"]} image={<Image src="/pixel.png" width="140px" height="72px" />} project={"https://pixelcoders.com.br"} github="https://github.com/viniciusamelio/pixelcoders-react" name="PixelCoders" />
+        <Slide key="1" tags={["Flutter", "NodeJS", "AdonisJS"]} image={<Image src="/biometricas.svg" width="90px" height="90px" />} project={"https://drive.google.com/file/d/155y9_F43xDOuX3xoYWs_sVlKQh48--5g/view?usp=sharing"} github="https://github.com/viniciusamelio/biometricas" name="Biométricas" />
+        <Slide key="2" tags={["Next", "Bulma"]} image={<Image src="/sigla.png" width="190px" height="70px" />} project={"https://sigla-hml.vercel.app"} github="https://github.com/viniciusamelio/sigla" name="Sigla" />
+        <Slide key="3" tags={["Flutter"]} image={<Image src="/pixeltasks.png" width="70px" height="70px" />} project={"https://drive.google.com/file/d/1qxJwlaVUzONS0lnoMIc-lapztK0rkwTY/view?usp=sharing"} github="https://github.com/viniciusamelio/pixeltasks" name="PixelTasks" />
 
-    </Glider>
+      </Glider>
     }
   }
 
@@ -78,14 +79,21 @@ export default function Home() {
           Vinicius Amélio - Desenvolvedor de Software
         </title>
         <meta charset="UTF-8"></meta>
-        <meta name="description" content="Desenvolvimento de Sites, WebApps e Mobile Apps"/>
+        <meta name="description" content="Desenvolvimento de Sites, WebApps e Mobile Apps" />
         <meta name="author" content="Vinicius Amélio"></meta>
         <link rel="shortcut icon" href="/icon.ico" />
       </Head>
       <Navbar />
       <div className="column is-12 is-flex is-align-items-center is-justify-content-center" style={{ marginTop: "105px" }}>
         <div className="column">
-          <div className="column is-12-mobile has-text-centered-mobile is-flex is-align-items-center is-justify-content-center">
+          <motion.div initial={{ scale: 0.7, x: -500}}
+            animate={{ scale: 0.9, x:0 }}
+            transition={{
+              type: "spring",
+              duration: 5,
+              stiffness: 260,
+              damping: 20
+            }} className="column is-12-mobile has-text-centered-mobile is-flex is-align-items-center is-justify-content-center">
             <div className="columns">
               <div className="column is-12-mobile is-3-desktop is-offset-1-desktop is-align-items-center is-flex is-justify-content-center">
                 <Image src="/picture.png" width="140px" height="140px" />
@@ -104,16 +112,16 @@ export default function Home() {
                   React, Next, Flutter, NodeJS, PHP e Adobe XD
                 </h3>
                 <div className="column is-12 has-text-centered is-hidden-desktop">
-                  <Button onClick={()=>window.open('https://api.whatsapp.com/send?phone=5511951213836&text=Ol%C3%A1%2CVinicius%2C%20estou%20entrando%20em%20contato%20atrav%C3%A9s%20do%20seu%20portf%C3%B3lio!',"__blank")} text="Me contrate" />
+                  <Button onClick={() => window.open('https://api.whatsapp.com/send?phone=5511951213836&text=Ol%C3%A1%2CVinicius%2C%20estou%20entrando%20em%20contato%20atrav%C3%A9s%20do%20seu%20portf%C3%B3lio!', "__blank")} text="Me contrate" />
                 </div>
               </div>
             </div>
-          </div>          
+          </motion.div>
         </div>
       </div>
       <div className="column is-12-mobile is-8-desktop is-offset-2-desktop has-text-centered-mobile">
-          <h4 className="has-text-white is-size-4 is-size-5-mobile ml-2 my-2" style={{ fontWeight: 'lighter' }}>
-              Alguns projetos
+        <h4 className="has-text-white is-size-4 is-size-5-mobile ml-2 my-2" style={{ fontWeight: 'lighter' }}>
+          Alguns projetos
           </h4>
         {carousel()}
       </div>
