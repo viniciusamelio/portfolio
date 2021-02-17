@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import { FaBars, FaTimes, FaLinkedin, FaGithubSquare, FaFilePdf } from 'react-icons/fa';
-import Image from 'next/image';
+import { motion } from 'framer-motion';
 import Button from './button';
 
 class Navbar extends PureComponent {
@@ -57,7 +57,7 @@ class Navbar extends PureComponent {
         return (
             <div>
                 <nav className="px-5 py-3 is-flex is-align-items-center is-justify-content-space-between" style={{ zIndex: 10, backgroundColor: '#1B0645', position: 'fixed', left: 0, top: 0, width: '100vw' }}>
-                    <Image src="/logo.png" height="70px" width="130px" />
+                    <motion.img initial={{scale: 0.5, rotate: 180}} animate={{scale:1, rotate: 0}} src="/logo.png" height="70px" width="130px" />
 
                     <div className="is-hidden-mobile is-flex is-align-items-center is-justify-content-flex-end pr-5">
                         <a className="mr-3 mt-2 has-text-centered" href="https://docs.google.com/document/d/1Lm1Jnf1F2PysFdkETunybXdBuToUoiNUB56vUwAmtl8/edit?usp=sharing" target="___blank">
