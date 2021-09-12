@@ -64,9 +64,10 @@ export default function Home() {
         }
       ]} hasArrows={true} duration={0.75} ref={gliderRef}>
         <Slide key="0" tags={["React", "FlexBox"]} image={<Image src="/pixel.png" width="140px" height="72px" />} project={"https://pixelcoders.com.br"} github="https://github.com/viniciusamelio/pixelcoders-react" name="PixelCoders" />
-        <Slide key="1" tags={["Flutter", "NodeJS", "AdonisJS"]} image={<Image src="/biometricas.svg" width="90px" height="90px" />} project={"https://drive.google.com/file/d/155y9_F43xDOuX3xoYWs_sVlKQh48--5g/view?usp=sharing"} github="https://github.com/viniciusamelio/biometricas" name="Biométricas" />
-        <Slide key="2" tags={["Next", "Bulma"]} image={<Image src="/sigla.png" width="190px" height="70px" />} project={"https://sigla-hml.vercel.app"} github="https://github.com/viniciusamelio/sigla" name="Sigla" />
-        <Slide key="3" tags={["Flutter"]} image={<Image src="/pixeltasks.png" width="70px" height="70px" />} project={"https://drive.google.com/file/d/1qxJwlaVUzONS0lnoMIc-lapztK0rkwTY/view?usp=sharing"} github="https://github.com/viniciusamelio/pixeltasks" name="PixelTasks" />
+        <Slide key="1" tags={["Flutter", "TDD", "Clean Arch"]} image={<Image src="/riven.png" width="90px" height="90px" />} project={"https://drive.google.com/file/d/1KvOvX6U3YCR6bvn9KNbuIifqp_Y8gG9R/view"} github="https://github.com/viniciusamelio/riven" name="Riven" />
+        <Slide key="2" tags={["Flutter", "NodeJS", "AdonisJS"]} image={<Image src="/biometricas.svg" width="90px" height="90px" />} project={"https://drive.google.com/file/d/155y9_F43xDOuX3xoYWs_sVlKQh48--5g/view?usp=sharing"} github="https://github.com/viniciusamelio/biometricas" name="Biométricas" />
+        <Slide key="3" tags={["Next", "Bulma"]} image={<Image src="/sigla.png" width="190px" height="70px" />} project={"https://sigla-hml.vercel.app"} github="https://github.com/viniciusamelio/sigla" name="Sigla" />
+        <Slide key="4" tags={["Flutter"]} image={<Image src="/pixeltasks.png" width="70px" height="70px" />} project={"https://drive.google.com/file/d/1qxJwlaVUzONS0lnoMIc-lapztK0rkwTY/view?usp=sharing"} github="https://github.com/viniciusamelio/pixeltasks" name="PixelTasks" />
 
       </Glider>
     }
